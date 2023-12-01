@@ -1,0 +1,53 @@
+body{
+    background-color: #363636;
+}
+
+.sentenses{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#text{
+    width: 858px;
+}
+
+.line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.word{
+    color: white;
+    font-size: 4rem;
+    font-family: sans-serif;
+    margin: 0rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    line-height: 5.2rem;
+
+    transition: opacity 200ms;
+}
+
+.letter {
+    display: inline-block;
+    transition: transform 200ms;
+}
+
+
+#text:has(.fancy:hover) .word:not(.fancy:hover){
+    opacity: 0.05;
+}
+
+
+@media screen and (max-width: 875px) {
+    .word{
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        letter-spacing: 2px;
+    }
+    #text{
+        width: 305px;
+    }
+}
