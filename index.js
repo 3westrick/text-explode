@@ -28,8 +28,6 @@ words.forEach(word => {
         })
     })
 
-
-
 })
 
 
@@ -38,6 +36,14 @@ words.forEach(word => {
 const blob = document.getElementById('blob')
 
 window.addEventListener('mousemove', event => {
+    const { clientX, clientY } = event;
+    blob.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`,
+    }, {duration: 2000, fill: 'forwards', })
+})
+
+window.addEventListener('touchstart', event => {
     const { clientX, clientY } = event;
     blob.animate({
         left: `${clientX}px`,
